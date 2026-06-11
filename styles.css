@@ -329,6 +329,13 @@ a {
   margin-bottom: 36px;
 }
 
+.section-intro {
+  margin: 18px 0 0;
+  max-width: 850px;
+  color: #42546c;
+  font-size: 1.02rem;
+}
+
 .card-grid {
   display: grid;
   gap: 16px;
@@ -347,7 +354,7 @@ a {
 }
 
 .service-card {
-  min-height: 246px;
+  min-height: 274px;
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -393,6 +400,52 @@ a {
 
 .case-label {
   color: var(--teal);
+}
+
+.case-study-list {
+  gap: 18px;
+}
+
+.case-study-card {
+  grid-template-columns: minmax(260px, 0.55fr) minmax(0, 1fr);
+  gap: 42px;
+  padding: 30px;
+}
+
+.case-heading {
+  position: sticky;
+  top: calc(var(--header-height) + 24px);
+}
+
+.case-study-card h3 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.case-body {
+  display: grid;
+  gap: 14px;
+}
+
+.case-body p {
+  margin: 0;
+  color: #3b4f68;
+}
+
+.case-insight {
+  margin-top: 8px;
+  border-left: 3px solid var(--brass);
+  border-radius: 0 8px 8px 0;
+  background: #f8fafc;
+  padding: 16px 18px;
+}
+
+.case-insight .case-insight-label {
+  margin-bottom: 6px;
+  color: var(--navy);
+  font-size: 0.78rem;
+  font-weight: 850;
+  text-transform: uppercase;
 }
 
 .contact-section {
@@ -522,6 +575,14 @@ a {
     grid-template-columns: 1fr;
     gap: 12px;
   }
+
+  .case-heading {
+    position: static;
+  }
+
+  .case-study-card {
+    gap: 20px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -577,6 +638,18 @@ a {
 
   .service-card {
     min-height: auto;
+  }
+
+  .case-study-card {
+    padding: 22px;
+  }
+
+  .case-study-card h3 {
+    font-size: 1.18rem;
+  }
+
+  .case-insight {
+    padding: 14px;
   }
 
   .contact-panel {
