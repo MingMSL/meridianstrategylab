@@ -1,9 +1,9 @@
 :root {
-  --ink: #081a34;
-  --navy: #0a2540;
+  --ink: #061e3d;
+  --navy: #061e3d;
   --blue: #16466d;
-  --teal: #0f766e;
-  --brass: #b88746;
+  --teal: #b86f17;
+  --brass: #b86f17;
   --paper: #ffffff;
   --mist: #f4f7fa;
   --line: #d9e1ea;
@@ -83,26 +83,43 @@ a {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 9px;
   min-width: 0;
   font-weight: 700;
 }
 
 .brand-mark {
-  display: inline-grid;
-  width: 42px;
-  height: 42px;
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
   flex: 0 0 auto;
-  place-items: center;
-  border: 1px solid rgba(184, 135, 70, 0.52);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  border: 1px solid var(--navy);
   border-radius: 8px;
-  background: var(--ink);
-  color: var(--paper);
-  font-size: 0.78rem;
+  background: var(--paper);
+  color: var(--navy);
+}
+
+.brand-initials {
+  font-size: 0.67rem;
+  font-weight: 850;
+  line-height: 1;
+}
+
+.brand-rule {
+  width: 14px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--brass);
 }
 
 .brand-name {
+  color: var(--navy);
   font-size: 0.98rem;
+  font-weight: 700;
   white-space: nowrap;
 }
 
@@ -298,9 +315,11 @@ a {
 .intro-points p {
   margin: 0;
   border-left: 3px solid var(--teal);
-  padding: 4px 0 4px 14px;
+  padding: 5px 0 5px 14px;
   color: #273c56;
+  font-size: 1.06rem;
   font-weight: 700;
+  line-height: 1.56;
 }
 
 .two-column {
@@ -381,6 +400,11 @@ a {
   color: var(--muted);
 }
 
+.service-card p {
+  font-size: 1.05rem;
+  line-height: 1.58;
+}
+
 .case-list {
   display: grid;
   gap: 14px;
@@ -432,6 +456,11 @@ a {
   color: #3b4f68;
 }
 
+.case-summary {
+  font-size: 1.02rem;
+  line-height: 1.64;
+}
+
 .case-insight {
   margin-top: 8px;
   border-left: 3px solid var(--brass);
@@ -446,6 +475,54 @@ a {
   font-size: 0.78rem;
   font-weight: 850;
   text-transform: uppercase;
+}
+
+.case-more {
+  margin-top: 4px;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.case-more summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--navy);
+  cursor: pointer;
+  font-weight: 800;
+  list-style: none;
+}
+
+.case-more summary::-webkit-details-marker {
+  display: none;
+}
+
+.case-more summary::after {
+  content: "+";
+  display: inline-grid;
+  width: 18px;
+  height: 18px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--brass);
+  font-size: 0.92rem;
+  line-height: 1;
+}
+
+.case-more[open] summary::after {
+  content: "-";
+}
+
+.case-more[open] .more-closed,
+.case-more:not([open]) .more-open {
+  display: none;
+}
+
+.case-more-content {
+  display: grid;
+  gap: 14px;
+  margin-top: 14px;
 }
 
 .contact-section {
@@ -497,6 +574,35 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+}
+
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 220px;
+}
+
+.footer-mark {
+  width: 36px;
+  height: 36px;
+}
+
+.footer-wordmark {
+  display: grid;
+  gap: 1px;
+  color: var(--navy);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.footer-wordmark span:last-child {
+  color: var(--navy);
+  font-size: 0.73rem;
+  font-weight: 650;
+  letter-spacing: 0;
+  opacity: 0.68;
+  text-transform: lowercase;
 }
 
 .footer-shell p {
@@ -666,5 +772,9 @@ a {
     align-items: flex-start;
     justify-content: center;
     padding: 18px 0;
+  }
+
+  .footer-brand {
+    min-width: 0;
   }
 }

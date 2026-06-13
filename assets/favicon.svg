@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Meridian Strategy Lab">
-  <rect width="64" height="64" rx="10" fill="#081a34"/>
-  <path d="M14 44V20h7l11 16 11-16h7v24h-7V31L34 44h-4L21 31v13z" fill="#ffffff"/>
-  <path d="M14 50h36" stroke="#b88746" stroke-width="4" stroke-linecap="round"/>
+  <rect x="5" y="5" width="54" height="54" rx="11" fill="#ffffff" stroke="#061E3D" stroke-width="3"/>
+  <path d="M15 40V22h5l6 9 6-9h5v18h-5V30l-5 8h-2l-5-8v10zm25 0V22h5v14h9v4z" fill="#061E3D"/>
+  <path d="M18 47h28" stroke="#B86F17" stroke-width="3" stroke-linecap="round"/>
 </svg>
