@@ -26,25 +26,25 @@ if (header && menuButton && nav) {
 const sections = [...document.querySelectorAll("main section[id]")];
 const navLinks = [...document.querySelectorAll(".site-nav a[href^='#']")];
 
-if ("IntersectionObserver" in window && sections.length && navLinks.length) {
+if (sections.length && navLinks.length) {
   const linkById = new Map(navLinks.map((link) => [link.getAttribute("href")?.slice(1), link]));
+  const headerOffset = () => (header?.offsetHeight || 0) + 96;
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+  const updateActiveNav = () => {
+    const currentY = window.scrollY + headerOffset();
+    let activeId = sections[0].id;
 
-      if (!visible) return;
+    sections.forEach((section) => {
+      if (section.offsetTop <= currentY) {
+        activeId = section.id;
+      }
+    });
 
-      navLinks.forEach((link) => link.classList.remove("is-active"));
-      linkById.get(visible.target.id)?.classList.add("is-active");
-    },
-    {
-      rootMargin: "-20% 0px -60% 0px",
-      threshold: [0.18, 0.4, 0.7],
-    }
-  );
+    navLinks.forEach((link) => link.classList.remove("is-active"));
+    linkById.get(activeId)?.classList.add("is-active");
+  };
 
-  sections.forEach((section) => observer.observe(section));
+  updateActiveNav();
+  window.addEventListener("scroll", updateActiveNav, { passive: true });
+  window.addEventListener("resize", updateActiveNav);
 }
