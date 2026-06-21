@@ -451,19 +451,76 @@ a {
   gap: 0;
 }
 
-.service-detail-card h3,
-.service-format-card h3 {
+.service-card-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
   margin-bottom: 12px;
 }
 
-.service-detail-card p,
-.service-format-card p {
-  margin-top: 12px;
+.service-card-heading .card-number {
+  flex: 0 0 auto;
+  line-height: 1.25;
 }
 
-.service-detail-card p:first-of-type,
-.service-format-card p:first-of-type {
-  margin-top: 0;
+.service-card-heading h3 {
+  flex: 1 1 auto;
+  margin: 0;
+  min-width: 0;
+}
+
+.service-summary {
+  margin: 0;
+}
+
+.service-details {
+  margin-top: 16px;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.service-details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  color: var(--navy);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 850;
+  list-style: none;
+}
+
+.service-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.service-details summary::after {
+  content: "+";
+  display: inline-grid;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--brass);
+  font-size: 0.92rem;
+  line-height: 1;
+}
+
+.service-details[open] summary::after {
+  content: "-";
+}
+
+.service-details-content {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.service-details-content p {
+  margin: 0;
 }
 
 .service-list-label,
