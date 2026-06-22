@@ -202,10 +202,10 @@ a {
 .eyebrow,
 .section-kicker,
 .case-label {
-  margin: 0 0 14px;
+  margin: 0 0 13px;
   color: var(--brass);
-  font-size: 0.78rem;
-  font-weight: 800;
+  font-size: clamp(0.84rem, 0.8rem + 0.16vw, 0.9rem);
+  font-weight: 850;
   letter-spacing: 0;
   text-transform: uppercase;
 }
@@ -302,8 +302,8 @@ a {
 .intro-grid h2,
 .section h2 {
   margin: 0;
-  font-size: 2.5rem;
-  line-height: 1.08;
+  font-size: clamp(2.04rem, 1.72rem + 1.08vw, 2.34rem);
+  line-height: 1.1;
   letter-spacing: 0;
 }
 
@@ -448,19 +448,22 @@ a {
 .service-detail-card,
 .service-format-card {
   min-height: auto;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
   gap: 0;
 }
 
 .service-card-heading {
   display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 12px;
+  align-items: baseline;
+  gap: 11px;
+  margin-bottom: 14px;
 }
 
 .service-card-heading .card-number {
   flex: 0 0 auto;
-  line-height: 1.25;
+  font-size: 0.95rem;
+  line-height: 1;
 }
 
 .service-card-heading h3 {
@@ -470,11 +473,14 @@ a {
 }
 
 .service-summary {
+  align-self: start;
   margin: 0;
 }
 
 .service-details {
-  margin-top: 16px;
+  align-self: end;
+  width: 100%;
+  margin-top: 20px;
   border-top: 1px solid var(--line);
   padding-top: 12px;
 }
@@ -489,6 +495,7 @@ a {
   font-size: 0.9rem;
   font-weight: 850;
   list-style: none;
+  min-height: 24px;
 }
 
 .service-details summary::-webkit-details-marker {
@@ -596,8 +603,20 @@ a {
 }
 
 .case-study-card h3 {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 0.42em;
+  align-items: baseline;
   margin: 0;
   font-size: 1.35rem;
+}
+
+.case-title-number {
+  color: var(--brass);
+}
+
+.case-title-text {
+  min-width: 0;
 }
 
 .case-body {
@@ -1226,7 +1245,8 @@ a {
 
   .intro-grid h2,
   .section h2 {
-    font-size: 2.05rem;
+    font-size: 1.94rem;
+    line-height: 1.12;
   }
 
   .services-grid {
