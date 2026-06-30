@@ -48,3 +48,10 @@ if (sections.length && navLinks.length) {
   window.addEventListener("scroll", updateActiveNav, { passive: true });
   window.addEventListener("resize", updateActiveNav);
 }
+
+window.addEventListener("load", () => {
+  const analytics = document.createElement("script");
+  analytics.src = "https://static.cloudflareinsights.com/beacon.min.js";
+  analytics.dataset.cfBeacon = JSON.stringify({ token: "e6acd1382fbc4f65a9bbfd2862b6fac0" });
+  document.body.append(analytics);
+});
