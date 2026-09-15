@@ -182,7 +182,7 @@ a {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background-image: url("assets/hero-initiative-architecture.png");
+  background-image: url("assets/hero-initiative-architecture.webp");
   background-position: center;
   background-size: cover;
 }
