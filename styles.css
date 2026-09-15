@@ -1696,3 +1696,8 @@ a {
     height: 84px;
   }
 }
+
+/* Third service card spans the grid */
+.service-grid .service-card-wide {
+  grid-column: 1 / -1;
+}
