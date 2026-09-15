@@ -1648,25 +1648,6 @@ a {
   }
 }
 
-/* Principal photo */
-.principal-head {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-.principal-head h2 {
-  margin-bottom: 0;
-}
-
-.principal-photo {
-  flex: none;
-  width: 108px;
-  height: 108px;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
 /* Contact: secondary link + working note on the dark panel */
 .contact-panel .contact-link {
   display: flex;
@@ -1686,18 +1667,29 @@ a {
   line-height: 1.62;
 }
 
-@media (max-width: 640px) {
-  .principal-head {
-    gap: 16px;
-  }
-
-  .principal-photo {
-    width: 84px;
-    height: 84px;
-  }
-}
-
 /* Third service card spans the grid */
 .service-grid .service-card-wide {
   grid-column: 1 / -1;
+}
+
+/* Privacy page */
+.card-subhead {
+  margin-top: 26px;
+}
+
+.privacy-grid {
+  margin-top: 18px;
+}
+
+.ai-note-link {
+  color: var(--paper);
+  text-decoration: underline;
+  text-decoration-color: var(--brass);
+  text-underline-offset: 4px;
+}
+
+.footer-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
