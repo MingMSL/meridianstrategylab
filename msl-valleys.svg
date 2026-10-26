@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" width="1000" height="620" role="img" aria-labelledby="msl-v-title msl-v-desc" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
   <title id="msl-v-title">Where technologies stall, and where MSL works</title>
-  <desc id="msl-v-desc">A technology lifecycle in four stages: Research (TRL 1–3), Development and demonstration (TRL 4–7), First commercial project (TRL 8–9), and Market adoption and scale. Momentum dips in three valleys at the handoffs between stages: the technology valley, the commercialization valley and the market valley. Meridian Strategy Lab works across the commercialization and market valleys: partner selection and joint venture structuring, research–industry governance, and cross-border entry.</desc>
+  <desc id="msl-v-desc">An illustrative view, not to scale, of a technology lifecycle in four stages: Research (TRL 1–3), Development and demonstration (TRL 4–7), First commercial project (TRL 8–9), and Market adoption and scale. The line shows the funding and support available to a project. It dips into three valleys at the handoffs between stages: the technology valley, the commercialization valley, and the market valley. A valley's depth shows how much funding and support falls away; its width shows how long the gap lasts. The commercialization valley is drawn deepest and widest. Meridian Strategy Lab works across the commercialization and market valleys: partner selection and joint venture structuring, research–industry governance, and cross-border entry.</desc>
 
   <!-- Card background -->
   <rect x="0.5" y="0.5" width="999" height="619" rx="14" fill="#FFFFFF" stroke="#E3E7EE"/>
@@ -36,22 +36,37 @@
     <text x="844" y="86" font-size="13" fill="#C9D2E3">Beyond TRL 9</text>
   </g>
 
-  <!-- Momentum curve with three valleys -->
-  <path d="M40,272 L190,272 C228,272 238,378 270,378 C302,378 312,266 350,266 L420,264 C458,264 466,424 500,424 C534,424 542,258 580,258 L650,256 C688,256 698,370 730,370 C762,370 772,246 810,246 C870,240 920,222 960,212 L960,440 L40,440 Z" fill="#E4EAF2"/>
+  <!-- How to read a valley -->
+  <text x="48" y="128" font-size="11" font-weight="700" letter-spacing="1.2" fill="#7A8396">HOW TO READ A VALLEY</text>
+  <g fill="#1F2A44">
+    <path d="M52,162 C66,162 70,194 88,194 C106,194 110,162 124,162" fill="none" stroke="#1F2A44" stroke-width="2"/>
+    <line x1="58" y1="150" x2="118" y2="150" stroke="#B8862E" stroke-width="1.5"/>
+    <polygon points="52,150 59,146 59,154" fill="#B8862E"/>
+    <polygon points="124,150 117,146 117,154" fill="#B8862E"/>
+    <line x1="88" y1="168" x2="88" y2="186" stroke="#B8862E" stroke-width="1.5"/>
+    <polygon points="88,162 84,169 92,169" fill="#B8862E"/>
+    <polygon points="88,192 84,185 92,185" fill="#B8862E"/>
+  </g>
+  <text x="140" y="155" font-size="13" fill="#4A5468"><tspan font-weight="700" fill="#1F2A44">Width:</tspan> how long the gap lasts</text>
+  <text x="140" y="180" font-size="13" fill="#4A5468"><tspan font-weight="700" fill="#1F2A44">Depth:</tspan> how much funding and</text>
+  <text x="140" y="197" font-size="13" fill="#4A5468">support falls away</text>
+
+  <!-- Funding and support curve with three valleys -->
+  <path d="M40,272 L205,272 C240,272 240,347 270,347 C300,347 300,264 335,264 L395,262 C440,262 445,430 480,430 L520,430 C555,430 560,256 605,256 L660,255 C695,255 700,374 730,374 C760,374 765,248 800,248 C860,240 920,222 960,212 L960,440 L40,440 Z" fill="#E4EAF2"/>
   <defs><clipPath id="msl-band-clip"><rect x="382" y="106" width="466" height="462" rx="10"/></clipPath></defs>
-  <path clip-path="url(#msl-band-clip)" d="M40,272 L190,272 C228,272 238,378 270,378 C302,378 312,266 350,266 L420,264 C458,264 466,424 500,424 C534,424 542,258 580,258 L650,256 C688,256 698,370 730,370 C762,370 772,246 810,246 C870,240 920,222 960,212 L960,440 L40,440 Z" fill="#EFE3C8"/>
-  <path d="M40,272 L190,272 C228,272 238,378 270,378 C302,378 312,266 350,266 L420,264 C458,264 466,424 500,424 C534,424 542,258 580,258 L650,256 C688,256 698,370 730,370 C762,370 772,246 810,246 C870,240 920,222 960,212" fill="none" stroke="#1F2A44" stroke-width="3" stroke-linecap="round"/>
-  <text x="48" y="258" font-size="13" font-style="italic" fill="#5B6476">Project momentum</text>
+  <path clip-path="url(#msl-band-clip)" d="M40,272 L205,272 C240,272 240,347 270,347 C300,347 300,264 335,264 L395,262 C440,262 445,430 480,430 L520,430 C555,430 560,256 605,256 L660,255 C695,255 700,374 730,374 C760,374 765,248 800,248 C860,240 920,222 960,212 L960,440 L40,440 Z" fill="#EFE3C8"/>
+  <path d="M40,272 L205,272 C240,272 240,347 270,347 C300,347 300,264 335,264 L395,262 C440,262 445,430 480,430 L520,430 C555,430 560,256 605,256 L660,255 C695,255 700,374 730,374 C760,374 765,248 800,248 C860,240 920,222 960,212" fill="none" stroke="#1F2A44" stroke-width="3" stroke-linecap="round"/>
+  <text x="48" y="258" font-size="13" font-style="italic" fill="#5B6476">Funding and support available</text>
   <rect x="382" y="106" width="466" height="462" rx="10" fill="none" stroke="#B8862E" stroke-width="1.5" stroke-dasharray="6 4"/>
 
   <!-- Valley markers -->
   <g font-size="13" font-weight="700" text-anchor="middle">
-    <circle cx="270" cy="354" r="12" fill="#FFFFFF" stroke="#1F2A44" stroke-width="2"/>
-    <text x="270" y="358.5" fill="#1F2A44">1</text>
-    <circle cx="500" cy="400" r="12" fill="#FFFFFF" stroke="#1F2A44" stroke-width="2"/>
-    <text x="500" y="404.5" fill="#1F2A44">2</text>
-    <circle cx="730" cy="346" r="12" fill="#FFFFFF" stroke="#1F2A44" stroke-width="2"/>
-    <text x="730" y="350.5" fill="#1F2A44">3</text>
+    <circle cx="270" cy="323" r="12" fill="#FFFFFF" stroke="#1F2A44" stroke-width="2"/>
+    <text x="270" y="327.5" fill="#1F2A44">1</text>
+    <circle cx="500" cy="406" r="12" fill="#FFFFFF" stroke="#1F2A44" stroke-width="2"/>
+    <text x="500" y="410.5" fill="#1F2A44">2</text>
+    <circle cx="730" cy="350" r="12" fill="#FFFFFF" stroke="#1F2A44" stroke-width="2"/>
+    <text x="730" y="354.5" fill="#1F2A44">3</text>
   </g>
 
   <!-- Valley legend -->
@@ -76,6 +91,6 @@
   </g>
 
   <!-- Credit line -->
-  <text x="40" y="600" font-size="12" fill="#7A8396">Based on the Technology Readiness Level (TRL) scale.</text>
+  <text x="40" y="600" font-size="12" fill="#7A8396">Illustrative, not to scale. TRL: Technology Readiness Level, a 1–9 scale of technical maturity.</text>
   <text x="960" y="600" font-size="12" text-anchor="end" fill="#7A8396">Meridian Strategy Lab</text>
 </svg>
